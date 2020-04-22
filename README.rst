@@ -111,6 +111,12 @@ Here's the simplest way you can call the script using ``docker``, assuming you'r
     # Now run any of the examples above using this alias, without the `.py` extension.
     enhance --zoom=1 --model=repair images/broken.jpg
 
+    # If you face issues in setting up your alias, follow the steps below. Lets say you have your image in a local folder called images in your desktop. Type the following commands in your OSX terminal.
+    $ cd images
+    $ ls 
+    image.png
+    $ sudo docker run --rm -v `pwd`:/ne/input -it alexjc/neural-enhance input/image.png
+
 **Multiple Images** — To enhance multiple images in a row (faster) from a folder or wildcard specification, make sure to quote the argument to the alias command:
 
 .. code:: bash
